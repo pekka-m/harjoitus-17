@@ -1,7 +1,7 @@
 /*********************************************************************
 Teht‰v‰: HARJOITUS 17
 Tekij‰: Pekka Melgin
-PVM: 5.11.2013
+PVM: 12.11.2013
 Kuvaus:
 Muokkaa edellist‰ ohjelmaa siten, ett‰ edell‰ m‰‰ritelty‰ tietuetyyppi‰
 k‰ytet‰‰n my‰s kahden muun "koululaisen" tietojen tallentamiseen.
@@ -19,9 +19,9 @@ struct henktiedot
 { 
  char etunimi[10];
  char sukunimi[15];
- float koulumatka;
+ int koulumatka;
  char osoite[20];
- char postinumero[6];
+ int postinumero;
  int kengannumero;
 }; 
 int main() 
@@ -44,7 +44,30 @@ int main()
 	cin.get(henktiedot[2].osoite,20);
 	cout << "Anna postinumerosi :";
 	cin >> henktiedot[2].postinumero;
-	int ind;
-	for ()
-	cout << henktiedot.etunimi << " " << henktiedot.sukunimi << endl << henktiedot.osoite << endl << henktiedot.postinumero << endl << henktiedot.kengannumero << endl << henktiedot.koulumatka << endl;
+	for (int ind = 0; ind < 3; ind++) {
+		cout << henktiedot[ind].etunimi << " "
+			<< henktiedot[ind].sukunimi << endl
+			<< henktiedot[ind].osoite << endl
+			<< henktiedot[ind].postinumero << endl
+			<< henktiedot[ind].kengannumero << endl
+			<< henktiedot[ind].koulumatka << endl;
+	}
+
+
+
+	for (int i = 0; i < 3; i++) {
+                for (int j = i+1; j < 3; j++) {
+                        if (henktiedot[i].koulumatka > henktiedot[j].koulumatka) {
+                                /*int apu = lkm[j].ika;
+                                lkm[j].ika = lkm[i].ika;
+                                lkm[i].ika = apu;*/
+								cout << "jee";
+
+                        }
+                }
+        }
+
+
+
+
 }
